@@ -1,0 +1,27 @@
+<script>
+
+    const carros = [
+        {marca: "Nissan", modelo: "370z", categoria: "Esportivo", preco: 40_000},
+        {marca: "Jaguar", modelo: "F-Type", categoria: "Esportivo", preco: 80_000},
+        {marca: "Dodge", modelo: "Charger R/T 1970", categoria: "Clássico", preco: 150_000},
+        {marca: "Koenigsegg", modelo: "Jesko Absolut", categoria: "Hipercarro", preco: 3_000_000},
+        {marca: "Rolls-Royce", modelo: "Droptail", categoria: "Luxo", preco: 30_000_000}
+    ]
+
+    //Processar o tamanho da lista
+    const tamanhoLista = carros.reduce((cont) => cont + 1,0)
+    console.log(tamanhoLista)
+
+    //Exibir o preço dos carros de altos valores
+    const carrosMaisCaros = carros.filter((c) => c.preco <= 150_000)
+    console.log(carrosMaisCaros)
+
+    //Aplicar 5% de desconto no preço
+    const desconto = carros.map((d) => d.preco * 0.95 )
+    console.log(desconto)
+
+    //Preço total dos carros na lista
+    const totalPreco = carros.reduce((soma, t) => soma + t.preco, 0)
+    console.log(totalPreco)
+
+</script>
